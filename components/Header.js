@@ -1,5 +1,6 @@
 import React from "react";
 import instagram from "../img/instagram.png";
+import instagram1 from "../img/instagram-logo.png";
 import Image from "next/image";
 import { IoSearch } from "react-icons/io5";
 import { AiFillHome, AiOutlineHeart } from "react-icons/ai";
@@ -16,10 +17,13 @@ export default function Header() {
     <AiOutlineHeart />,
   ];
   return (
-    <div className="flex px-48 py-2 items-center">
+    <div className="flex lg:px-48 sm:px-5 px-1 py-2 items-center border-b">
       <div className="flex justify-between items-center w-full">
-        <div className="flex items-center">
+        <div className="sm:flex items-center hidden">
           <Image src={instagram} alt="instagram" className="cursor-pointer" />
+        </div>
+        <div className="flex items-center sm:hidden w-8">
+          <Image src={instagram1} alt="instagram" className="cursor-pointer" />
         </div>
         <div className="flex items-center bg-gray-50 rounded-md py-1 px-3">
           <div className="font-bold text-lg mx-2">
@@ -33,7 +37,7 @@ export default function Header() {
         </div>
         <div className="flex items-center">
           {iconsArr.map((e, key) => {
-            return <div className="mr-2 text-2xl">{e}</div>;
+            return <div className="mr-2 text-2xl hidden sm:block">{e}</div>;
           })}
           <div className="mr-2">
             <BiUserCircle className="text-2xl" />
