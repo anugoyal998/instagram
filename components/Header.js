@@ -37,7 +37,7 @@ export default function Header() {
         </div>
         <div className="flex items-center">
           {iconsArr.map((e, key) => {
-            return <div className="mr-2 text-2xl hidden sm:block">{e}</div>;
+            return <div className="mr-2 text-2xl hidden sm:block" key={key}>{e}</div>;
           })}
           <div className="mr-2">
             <BiUserCircle className="text-2xl" />
