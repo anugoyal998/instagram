@@ -37,7 +37,7 @@ function Modal() {
       async (snapshot) => {
         const downloadURL = await getDownloadURL(imageRef);
         await updateDoc(doc(db, "posts", docRef.id), {
-          iamge: downloadURL,
+          image: downloadURL,
         });
       }
     );
